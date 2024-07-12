@@ -1,6 +1,8 @@
-
-import logo from './logo.jpg';
+mport logo from './logo.jpg';
 import './App.css';
+import { getFullYear } from './utils';
+import { getFooterCopy } from './utils';
+
 
 function App() {
   return (
@@ -11,13 +13,17 @@ function App() {
       </header>
       <body className='App-body'>
         <p>Login to access the full dashboard</p>
+        <label htmlFor='email'>Email:</label>
+        <input id='email' type='text' />
+        <label htmlFor='password'>Password:</label>
+        <input id='password' type='text'/>
+        <button>OK</button>
       </body>
       <footer className='App-footer'>
-        <p>Copyright 2020 - holberton School</p>
+        <p>Copyright {getFullYear()} - {getFooterCopy()}</p>
       </footer>
     </>
   );
 }
 
 export default App;
-
